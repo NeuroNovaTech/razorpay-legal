@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legal Pages - NeuroNova Tech</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
+            color: #ffffff;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            padding: 40px 0;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            margin-bottom: 40px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            background: linear-gradient(135deg, #6e44ff, #00d9ff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            color: #b0b0b0;
+            font-size: 1.2rem;
+        }
+
+        .nav-tabs {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 40px;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 20px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-tab {
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            color: #ffffff;
+            padding: 12px 25px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .nav-tab:hover {
+            background: rgba(110, 68, 255, 0.3);
+            border-color: #6e44ff;
+            transform: translateY(-2px);
+        }
+
+        .nav-tab.active {
+            background: linear-gradient(135deg, #6e44ff, #00d9ff);
+            border-color: transparent;
+            box-shadow: 0 5px 15px rgba(110, 68, 255, 0.4);
+        }
+
+        .content-section {
+            display: none;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 40px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            margin-bottom: 30px;
+        }
+
+        .content-section.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .section-title {
+            font-size: 2rem;
+            color: #6e44ff;
+            margin-bottom: 20px;
+            border-bottom: 2px solid rgba(110, 68, 255, 0.3);
+            padding-bottom: 10px;
+        }
+
+        .section-subtitle {
+            font-size: 1.3rem;
+            color: #00d9ff;
+            margin: 25px 0 15px 0;
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: #e0e0e0;
+        }
+
+        ul {
+            margin: 15px 0;
+            padding-left: 30px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            color: #e0e0e0;
+        }
+
+        strong {
+            color: #ffffff;
+        }
+
+        a {
+            color: #00d9ff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #6e44ff;
+            text-decoration: underline;
+        }
+
+        .contact-info {
+            background: rgba(110, 68, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-left: 4px solid #6e44ff;
+        }
+
+        .highlight {
+            background: rgba(0, 217, 255, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+            margin: 15px 0;
+            border-left: 4px solid #00d9ff;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 30px 0;
+            color: #b0b0b0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .nav-tabs {
+                flex-direction: column;
+            }
+            
+            .nav-tab {
+                text-align: center;
+            }
+            
+            .content-section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>NeuroNova Tech</h1>
+            <p>Legal & Policy Documents</p>
+        </div>
+
+        <div class="nav-tabs">
+            <div class="nav-tab active" data-target="contact">Contact Us</div>
+            <div class="nav-tab" data-target="shipping">Shipping Policy</div>
+            <div class="nav-tab" data-target="terms">Terms & Conditions</div>
+            <div class="nav-tab" data-target="refunds">Refunds Policy</div>
+            <div class="nav-tab" data-target="privacy">Privacy Policy</div>
+        </div>
+
+        <!-- Contact Section -->
+        <div id="contact" class="content-section active">
+            <h2 class="section-title">Contact NeuroNova Tech</h2>
+            <p>If you need help with purchases, licensing, or have questions about code you bought from us, please use the contact details below.</p>
+
+            <div class="contact-info">
+                <h3 class="section-subtitle">General Inquiries</h3>
+                <p><strong>Email:</strong> <a href="mailto:neuronovatech.contact@gmail.com">neuronovatech.contact@gmail.com</a></p>
+                <p><strong>Website:</strong> <a href="https://neuronovatech.in">neuronovatech.in</a></p>
+                <p><strong>Business:</strong> NeuroNova Tech</p>
+                <p><strong>Working Hours:</strong> Monday — Friday, 9:00 AM — 6:00 PM (IST)</p>
+            </div>
+
+            <h3 class="section-subtitle">Sales and Licensing</h3>
+            <p>For questions about purchases, digital license transfers, commercial licensing, or refunds, please email <a href="mailto:neuronovatech.contact@gmail.com">neuronovatech.contact@gmail.com</a> and include your order ID and the email used at checkout.</p>
+
+            <h3 class="section-subtitle">Technical Support</h3>
+            <p>If you need technical help with code you purchased (installation, minor bugfixes or compatibility questions), please open a support request by emailing <a href="mailto:neuronovatech.contact@gmail.com">neuronovatech.contact@gmail.com</a> with:</p>
+            <ul>
+                <li>Order ID</li>
+                <li>Product name / filename</li>
+                <li>Short description of the issue and screenshots (if any)</li>
+            </ul>
+
+            <div class="highlight">
+                <p><strong>Response Time:</strong> We typically respond to all inquiries within 24-48 hours during business days.</p>
+            </div>
+        </div>
+
+        <!-- Shipping Policy Section -->
+        <div id="shipping" class="content-section">
+            <h2 class="section-title">Shipping Policy</h2>
+            <p><strong>Last updated:</strong> December 19, 2024</p>
+
+            <div class="highlight">
+                <p>NeuroNova Tech sells <strong>digital products (code, templates, and software)</strong>. No physical goods are shipped. All purchases are delivered electronically via download link or emailed license files immediately after successful payment.</p>
+            </div>
+
+            <h3 class="section-subtitle">Delivery</h3>
+            <ul>
+                <li><strong>Delivery method:</strong> Instant download link on the order confirmation page and a confirmation email containing the download link and license information.</li>
+                <li>If you do not receive your email within 30 minutes, please check your spam folder and then contact <a href="mailto:neuronovatech.contact@gmail.com">neuronovatech.contact@gmail.com</a>.</li>
+                <li>Download links are valid for 30 days from the date of purchase. Please download and backup your purchases immediately.</li>
+            </ul>
+
+            <h3 class="section-subtitle">International Deliveries</h3>
+            <p>Not applicable — products are downloadable worldwide with no customs or shipping fees.</p>
+
+            <h3 class="section-subtitle">Contact</h3>
+            <p>For delivery or download issues email <a href="mailto:neuronovatech.contact@gmail.com">neuronovatech.contact@gmail.com</a>.</p>
+        </div>
+
+        <!-- Terms & Conditions Section -->
+        <div id="terms" class="content-section">
+            <h2 class="section-title">Terms and Conditions</h2>
+            <p><strong>Last updated:</strong> December 19, 2024</p>
+
+            <h3 class="section-subtitle">1. Introduction</h3>
+            <p>These Terms and Conditions ("Terms") govern your use of services and purchase of digital products from NeuroNova Tech ("we", "us", or "our"). By purchasing or using our products you agree to these Terms.</p>
+
+            <h3 class="section-subtitle">2. Digital Products and License</h3>
+            <p>We sell digital code, templates, and software. Unless stated otherwise, every sale includes a <strong>single-user, non-transferable license</strong> for the purchased product. You may not redistribute, resell, or claim the product as your own. For extended or commercial licenses, please contact sales.</p>
+
+            <h3 class="section-subtitle">3. Payment and Delivery</h3>
+            <p>Payments are processed by Razorpay (or other payment gateways). After successful payment, you will receive an order confirmation email and a download link. It is your responsibility to provide a correct email address at checkout.</p>
+
+            <h3 class="section-subtitle">4. Refunds and Cancellations</h3>
+            <p>Refer to our Refunds & Cancellations policy. Digital products are eligible for refund only under the conditions stated there.</p>
+
+            <h3 class="section-subtitle">5. Intellectual Property</h3>
+            <p>All content, code, and assets are owned by NeuroNova Tech unless otherwise licensed. Unauthorized copying, distribution, or modification is prohibited.</p>
+
+            <h3 class="section-subtitle">6. Liability</h3>
+            <p>To the maximum extent permitted by law, NeuroNova Tech is not liable for indirect, incidental, or consequential damages arising from the use of our products.</p>
+
+            <h3 class="section-subtitle">7. Governing Law</h3>
+            <p>These Terms are governed by the laws of India. Any disputes shall be resolved in appropriate courts in India.</p>
+
+            <h3 class="section-subtitle">8. Contact</h3>
+            <p>If you have questions about these Terms, email <a href="mailto:neuronovatech.contact@gmail.com">neuronovatech.contact@gmail.com</a>.</p>
+        </div>
+
+        <!-- Refunds Policy Section -->
+        <div id="refunds" class="content-section">
+            <h2 class="section-title">Cancellations & Refunds</h2>
+            <p><strong>Last updated:</strong> December 19, 2024</p>
+
+            <h3 class="section-subtitle">Digital Product Refund Policy</h3>
+            <p>Because our products are digital and available for instant download, refunds are provided only in limited circumstances:</p>
+            <ul>
+                <li>Duplicate charge or payment processing error</li>
+                <li>We are unable to deliver the purchased files (download link failed) and support cannot fix the issue within 72 hours</li>
+                <li>The product materially differs from the product description</li>
+                <li>Technical incompatibility that cannot be resolved through support</li>
+            </ul>
+
+            <div class="highlight">
+                <p><strong>Non-refundable situations:</strong> Change of mind, not reading product description properly, lack of technical knowledge to use the product, or compatibility issues with your specific setup that could be resolved.</p>
+            </div>
+
+            <h3 class="section-subtitle">Refund Process</h3>
+            <p>If you believe you are eligible for a refund, please email <a href="mailto:neuronovatech.contact@gmail.com">neuronovatech.contact@gmail.com</a> with your order ID and reason. Refund requests will be reviewed and processed within 7-10 business days. Refunds may be subject to verification and may be denied if the product has been clearly used in violation of the license.</p>
+
+            <h3 class="section-subtitle">Cancellation</h3>
+            <p>Orders for digital goods are fulfilled immediately; therefore cancellation before delivery is only possible if the charge is still pending. Contact your bank and our support team immediately.</p>
+
+            <h3 class="section-subtitle">Chargebacks</h3>
+            <p>If you initiate a chargeback with your payment provider without contacting support, we reserve the right to refuse future sales and to contest fraudulent chargebacks with supporting evidence.</p>
+        </div>
+
+        <!-- Privacy Policy Section -->
+        <div id="privacy" class="content-section">
+            <h2 class="section-title">Privacy Policy</h2>
+            <p><strong>Last updated:</strong> December 19, 2024</p>
+
+            <h3 class="section-subtitle">1. Introduction</h3>
+            <p>NeuroNova Tech ("we", "us") respects your privacy. This policy explains what personal data we collect, how we use it, and your rights.</p>
+
+            <h3 class="section-subtitle">2. Information We Collect</h3>
+            <ul>
+                <li><strong>Information you provide:</strong> Name, email, billing address, and payment details processed by our payment gateway (we do not store full card details)</li>
+                <li><strong>Automatically collected data:</strong> IP address, device and browser information, pages visited, and usage metrics collected via analytics tools</li>
+                <li><strong>Cookies:</strong> We use cookies and similar technologies to operate the site and provide analytics. You can control cookies via browser settings</li>
+            </ul>
+
+            <h3 class="section-subtitle">3. How We Use Your Information</h3>
+            <ul>
+                <li>To process orders and deliver digital products</li>
+                <li>To communicate with you about your orders and support requests</li>
+                <li>To analyze and improve our website and products</li>
+                <li>To comply with legal obligations and fight fraud</li>
+                <li>To send important updates about purchased products</li>
+            </ul>
+
+            <h3 class="section-subtitle">4. Sharing and Disclosure</h3>
+            <p>We may share data with third parties that provide services for us (payment processors like Razorpay, email delivery providers, hosting). We require those providers to protect personal data and use it only to provide services to us.</p>
+
+            <h3 class="section-subtitle">5. Data Retention</h3>
+            <p>We retain personal data as long as necessary to provide services, comply with legal obligations, and resolve disputes. Order and transaction records are retained for accounting purposes.</p>
+
+            <h3 class="section-subtitle">6. Your Rights</h3>
+            <p>You may request access, correction, or deletion of your personal data. To exercise these rights, contact <a href="mailto:neuronovatech.contact@gmail.com">neuronovatech.contact@gmail.com</a>.</p>
+
+            <h3 class="section-subtitle">7. Security</h3>
+            <p>We use reasonable administrative and technical measures to protect personal data; however, no method of transmission over the Internet is completely secure.</p>
+
+            <h3 class="section-subtitle">8. Children</h3>
+            <p>Our services are not directed at children under 13. We do not knowingly collect data from children under 13.</p>
+
+            <h3 class="section-subtitle">9. Changes to This Policy</h3>
+            <p>We may update this policy. When we do, we will post the updated policy with a revised "Last updated" date.</p>
+
+            <h3 class="section-subtitle">10. Contact</h3>
+            <p>If you have questions about this policy, contact <a href="mailto:neuronovatech.contact@gmail.com">neuronovatech.contact@gmail.com</a>.</p>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2025 NeuroNova Tech. All rights reserved.</p>
+            <p>Last updated: November 2025</p>
+        </div>
+    </div>
+
+    <script>
+        // Tab navigation functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabs = document.querySelectorAll('.nav-tab');
+            const sections = document.querySelectorAll('.content-section');
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    const target = this.getAttribute('data-target');
+                    
+                    // Remove active class from all tabs and sections
+                    tabs.forEach(t => t.classList.remove('active'));
+                    sections.forEach(s => s.classList.remove('active'));
+                    
+                    // Add active class to clicked tab and corresponding section
+                    this.classList.add('active');
+                    document.getElementById(target).classList.add('active');
+                });
+            });
+
+            // Add smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+
+        // Add some interactive effects
+        document.querySelectorAll('.nav-tab').forEach(tab => {
+            tab.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-2px)';
+            });
+            
+            tab.addEventListener('mouseleave', function() {
+                if (!this.classList.contains('active')) {
+                    this.style.transform = 'translateY(0)';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
