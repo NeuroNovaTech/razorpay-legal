@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <link rel="icon" type="image/png" href="/favicon-512X512.png">"
+    <title>Razorpay Privacy Policy · NeuroNova Tech</title>
+    <meta name="description"
+        content="Razorpay privacy policy for NeuroNova Tech — payment processing, data handling, and security standards.">
+
+    <!-- Google Fonts + system fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* ---------- RESET & GLOBAL (META-STYLE WHITE THEME) ---------- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: #ffffff;
+            color: #1e2a3e;
+            line-height: 1.5;
+            font-weight: 400;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* header (clean, sticky, matches hub) */
+        .site-header {
+            border-bottom: 1px solid #eef2f6;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(2px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 0;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .brand-icon {
+            width: 42px;
+            height: 42px;
+            background: #0a2b3e;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 18px;
+        }
+
+        .logo-text {
+            font-weight: 700;
+            font-size: 1.3rem;
+            letter-spacing: -0.3px;
+            color: #0a2540;
+        }
+
+        .back-home {
+            font-size: 0.9rem;
+            color: #4a5b6e;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s;
+            border: 1px solid #e2e8f0;
+            padding: 8px 16px;
+            border-radius: 40px;
+            background: #fafcfc;
+        }
+
+        .back-home:hover {
+            color: #0f2b3d;
+            border-color: #cbd5e1;
+            background: #ffffff;
+        }
+
+        /* MAIN LAYOUT (two column: sidebar + content) */
+        .policy-layout {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 64px;
+            padding: 56px 0 96px;
+        }
+
+        /* Sidebar TOC */
+        .sidebar-toc {
+            position: sticky;
+            top: 100px;
+            height: fit-content;
+            border-left: 2px solid #eef2f8;
+            padding-left: 24px;
+        }
+
+        .sidebar-toc h4 {
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+            color: #6c7a8e;
+            margin-bottom: 24px;
+        }
+
+        .toc-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .toc-list li a {
+            font-size: 0.9rem;
+            color: #4a5b6e;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        .toc-list li a:hover {
+            color: #0a2540;
+        }
+
+        /* main content area */
+        .policy-content {
+            max-width: 800px;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 6px 14px;
+            background: #eff6ff;
+            border-radius: 40px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #1e40af;
+            letter-spacing: 0.01em;
+            margin-bottom: 28px;
+        }
+
+        .policy-content h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+            color: #0a2540;
+            margin-bottom: 20px;
+        }
+
+        .lead {
+            font-size: 1.15rem;
+            color: #3c4b5c;
+            margin-bottom: 32px;
+            border-left: 3px solid #dce5ef;
+            padding-left: 20px;
+        }
+
+        .last-updated {
+            background: #f8fafc;
+            border-radius: 20px;
+            padding: 16px 24px;
+            font-size: 0.85rem;
+            color: #5a6879;
+            border: 1px solid #edf2f7;
+            margin-bottom: 56px;
+        }
+
+        /* policy sections */
+        .policy-section {
+            margin-bottom: 64px;
+            scroll-margin-top: 100px;
+        }
+
+        .policy-section h2 {
+            font-size: 1.75rem;
+            font-weight: 600;
+            letter-spacing: -0.3px;
+            margin-bottom: 24px;
+            color: #0f2b3d;
+            border-bottom: 1px solid #eef2f6;
+            padding-bottom: 12px;
+        }
+
+        .policy-section p {
+            color: #2c3e4e;
+            margin-bottom: 1.25rem;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .policy-section ul,
+        .policy-section .custom-list {
+            margin: 1.25rem 0 1.5rem 1.5rem;
+            color: #2c3e4e;
+        }
+
+        .policy-section li {
+            margin-bottom: 0.6rem;
+        }
+
+        .highlight-card {
+            background: #f9fbfd;
+            border-radius: 20px;
+            padding: 24px;
+            border: 1px solid #eef2f8;
+            margin: 24px 0;
+        }
+
+        .contact-card {
+            background: #f9fbfd;
+            border-radius: 24px;
+            border: 1px solid #eef2f8;
+            padding: 32px;
+            margin-top: 24px;
+        }
+
+        .contact-card h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        footer {
+            border-top: 1px solid #eef2f6;
+            padding: 32px 0 48px;
+            background: #ffffff;
+            text-align: center;
+            color: #6c7a8e;
+            font-size: 0.85rem;
+        }
+
+        /* responsiveness */
+        @media (max-width: 900px) {
+            .policy-layout {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .sidebar-toc {
+                position: relative;
+                top: 0;
+                border-left: none;
+                padding-left: 0;
+                border-bottom: 1px solid #eef2f6;
+                padding-bottom: 20px;
+            }
+
+            .toc-list {
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 18px;
+            }
+
+            .policy-content h1 {
+                font-size: 2.3rem;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .container {
+                padding: 0 20px;
+            }
+
+            .policy-content h1 {
+                font-size: 1.9rem;
+            }
+        }
+
+        a {
+            text-decoration: none;
+            color: #2563eb;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* =========================================
+   HIDE SCROLLBAR BUT KEEP SCROLL WORKING
+========================================= */
+
+        /* Chrome, Edge, Safari */
+        ::-webkit-scrollbar {
+            width: 0;
+            height: 0;
+            display: none;
+        }
+
+        /* Firefox */
+        html {
+            scrollbar-width: none;
+        }
+
+        /* IE & old Edge */
+        body {
+            -ms-overflow-style: none;
+        }
+
+        /* Prevent horizontal scrollbar */
+        html,
+        body {
+            overflow-x: hidden;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="container">
+            <div class="header-inner">
+                <div class="logo-area">
+                    <div class="brand-icon">💳</div>
+                    <span class="logo-text">NeuroNova Tech · Legal & Policies</span>
+                </div>
+                <a href="/privacy/privacy.html" class="back-home">
+                    ← Back to Privacy Hub
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="policy-layout">
+                <!-- Sidebar table of contents -->
+                <aside class="sidebar-toc">
+                    <h4>On this page</h4>
+                    <ul class="toc-list">
+                        <li><a href="#contact">Contact Us</a></li>
+                        <li><a href="#shipping">Shipping Policy</a></li>
+                        <li><a href="#terms">Terms & Conditions</a></li>
+                        <li><a href="#refunds">Refunds & Cancellations</a></li>
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                    </ul>
+                </aside>
+
+                <!-- Main policy content (all sections from original, white theme) -->
+                <div class="policy-content">
+                    <div class="hero-badge">Legal Documents</div>
+                    <h1>NeuroNova Tech<br>Legal & Policy Center</h1>
+                    <div class="lead">
+                        Transparent policies for digital products, payments, and privacy.
+                    </div>
+                    <div class="last-updated">
+                        📅 Last updated: December 19, 2025 · All policies effective from this date.
+                    </div>
+
+                    <!-- Contact Section -->
+                    <section id="contact" class="policy-section">
+                        <h2>Contact NeuroNova Tech</h2>
+                        <p>If you need help with purchases, licensing, or have questions about code you bought from us,
+                            please use the contact details below.</p>
+
+                        <div class="highlight-card">
+                            <h3 style="font-size: 1.1rem; margin-bottom: 12px; color: #0a2540;">📬 General Inquiries
+                            </h3>
+                            <p><strong>Email:</strong> <a
+                                    href="mailto:neuronovatech.contact@gmail.com">neuronovatech.contact@gmail.com</a>
+                            </p>
+                            <p><strong>Website:</strong> <a href="https://neuronovatech.in">neuronovatech.in</a></p>
+                            <p><strong>Business:</strong> NeuroNova Tech</p>
+                            <p><strong>Working Hours:</strong> Monday — Friday, 9:00 AM — 6:00 PM (IST)</p>
+                        </div>
+
+                        <h3 style="font-size: 1.2rem; font-weight: 600; margin: 24px 0 12px 0;">💼 Sales and Licensing
+                        </h3>
+                        <p>For questions about purchases, digital license transfers, commercial licensing, or refunds,
+                            please email <a
+                                href="mailto:neuronovatech.contact@gmail.com">neuronovatech.contact@gmail.com</a> and
+                            include your order ID and the email used at checkout.</p>
+
+                        <h3 style="font-size: 1.2rem; font-weight: 600; margin: 24px 0 12px 0;">🛠️ Technical Support
+                        </h3>
+                        <p>If you need technical help with code you purchased (installation, minor bugfixes or
+                            compatibility questions), please open a support request by emailing <a
+                                href="mailto:neuronovatech.contact@gmail.com">neuronovatech.contact@gmail.com</a> with:
+                        </p>
+                        <ul>
+                            <li>Order ID</li>
+                            <li>Product name / filename</li>
+                            <li>Short description of the issue and screenshots (if any)</li>
+                        </ul>
+
+                        <div class="highlight-card">
+                            <p><strong>⏱️ Response Time:</strong> We typically respond to all inquiries within 24-48
+                                hours during business days.</p>
+                        </div>
+                    </section>
+
+                    <!-- Shipping Policy Section -->
+                    <section id="shipping" class="policy-section">
+                        <h2>Shipping Policy</h2>
+                        <p><strong>Last updated:</strong> December 19, 2025</p>
+
+                        <div class="highlight-card">
+                            <p>NeuroNova Tech sells <strong>digital products (code, templates, and software)</strong>.
+                                No physical goods are shipped. All purchases are delivered electronically via download
+                                link or emailed license files immediately after successful payment.</p>
+                        </div>
+
+                        <h3 style="font-size: 1.2rem; font-weight: 600; margin: 24px 0 12px 0;">📦 Delivery</h3>
+                        <ul>
+                            <li><strong>Delivery method:</strong> Instant download link on the order confirmation page
+                                and a confirmation email containing the download link and license information.</li>
+                            <li>If you do not receive your email within 30 minutes, please check your spam folder and
+                                then contact <a
+                                    href="mailto:neuronovatech.contact@gmail.com">neuronovatech.contact@gmail.com</a>.
+                            </li>
+                            <li>Download links are valid for 30 days from the date of purchase. Please download and
+                                backup your purchases immediately.</li>
+                        </ul>
+
+                        <h3 style="font-size: 1.2rem; font-weight: 600; margin: 24px 0 12px 0;">🌍 International
+                            Deliveries</h3>
+                        <p>Not applicable — products are downloadable worldwide with no customs or shipping fees.</p>
+
+                        <h3 style="font-size: 1.2rem; font-weight: 600; margin: 24px 0 12px 0;">📧 Contact</h3>
+                        <p>For delivery or download issues email <a
+                                href="mailto:neuronovatech.contact@gmail.com">neuronovatech.contact@gmail.com</a>.</p>
+                    </section>
+
+                    <!-- Terms & Conditions Section -->
+                    <section id="terms" class="policy-section">
+                        <h2>Terms and Conditions</h2>
+                        <p><strong>Last updated:</strong> December 19, 2025</p>
+
+                        <h3 style="font-size: 1.2rem; font-weight: 600; margin: 24px 0 12px 0;">1. Introduction</h3>
+                        <p>These Terms and Conditions ("Terms") govern your use of services and purchase of digital
+                            products from NeuroNova Tech ("we", "us", or "our"). By purchasing or using our products you
+                            agree to these Terms.</p>
+
+                        <h3 style="font-size: 1.2rem; font-weight: 600; margin: 24px 0 12px 0;">2. Digital Products and
+                            License</h3>
+                        <p>We sell digital code, templates, and software. Unless stated otherwise, every sale includes a
+                            <strong>single-user, non-transferable license</strong> for the purchased product. You may
+                            not redistribute, resell, or claim the product as your own. For extended or commercial
+                            licenses, please contact sales.</p>
+
+                        <h3 style="font-size: 1.2rem; font-weight: 600; margin: 24px 0 12px 0;">3. Payment and Delivery
+                        </h3>
+                        <p>Payments are processed by Razorpay (or other payment gateways). After successful payment, you
+                            will receive an order confirmation email and a download link. It is your responsibility to
+                            provide a correct email address at checkout.</p>
+
+                        <h3 style="font-size: 1.2rem; font-weight: 600; margin: 24px 0 12px 0;">4. Refunds and
+                            Cancellations</h3>
+                        <p>Refer to our Refunds & Cancellations policy. Digital products are eligible for refund only
+                            under the conditions stated there.</p>
+
+                        <h3 style="font-size: 1.2rem; font-weight: 600; margin: 24px 0 12px 0;">5. Intellectual Property
+                        </h3>
+                        <p>All content, code, and assets are owned by NeuroNova Tech unless otherwise licensed.
+                            Unauthorized copying, distribution, or modification is prohibited.</p>
+
+                        <h3 style="font-size: 1.2rem; font-weight: 600; margin: 24px 0 12px 0;">6. Liability</h3>
+                        <p>To the maximum extent permitted by law, NeuroNova Tech is not liable for indirect,
+                            incidental, or consequential damages arising from the use of our products.</p>
+
+                        <h3 style="font-size: 1.2rem; font-weight: 600; margin: 24px 0 12px 0;">7. Governing Law</h3>
+                        <p>These Terms are governed by the laws of India. Any disputes shall be resolved in appropriate
+                            courts in India.</p>
+
+                        <h3 style="font-size: 1.2rem; font-weight: 600; margin: 24px 0 12px 0;">8. Contact</h3>
+                        <p>If you have questions about these Terms, email <a
+                                href="mailto:neuronovatech.contact@gmail.com">neuronovatech.contact@gmail.com</a>.</p>
+                    </section>
+
+                    <!-- Refunds Policy Section -->
+                    <section id="refunds" class="policy-section">
+                        <h2>Cancellations & Refunds</h2>
+                        <p><strong>Last updated:</strong> December 19, 2025</p>
+
+                        <h3 style="font-size: 1.2rem; font-weight: 600; margin: 24px 0 12px 0;">Digital Product Refund
+                            Policy</h3>
+                        <p>Because our products are digital and available for instant download, refunds are provided
+                            only in limited circumstances:</p>
+                        <ul>
+                            <li>Duplicate charge or payment processing error</li>
+                            <li>We are unable to deliver the purchased files (download link failed) and support cannot
+                                fix the issue within 72 hours</li>
+                            <li>The product materially differs from the product description</li>
+                            <li>Technical incompatibility that cannot be resolved through support</li>
+                        </ul>
+
+                        <div class="highlight-card">
+                            <p><strong>⚠️ Non-refundable situations:</strong> Change of mind, not reading product
+                                description properly, lack of technical knowledge to use the product, or compatibility
+                                issues with your specific setup that could be resolved.</p>
+                        </div>
+
+                        <h3 style="font-size: 1.2rem; font-weight: 600; margin: 24px 0 12px 0;">Refund Process</h3>
+                        <p>If you believe you are eligible for a refund, please email <a
+                                href="mailto:neuronovatech.contact@gmail.com">neuronovatech.contact@gmail.com</a> with
+                            your order ID and reason. Refund requests will be reviewed and processed within 7-10
+                            business days. Refunds may be subject to verification and may be denied if the product has
+                            been clearly used in violation of the license.</p>
+
+                        <h3 style="font-size: 1.2rem; font-weight: 600; margin: 24px 0 12px 0;">Cancellation</h3>
+                        <p>Orders for digital goods are fulfilled immediately; therefore cancellation before delivery is
+                            only possible if the charge is still pending. Contact your bank and our support team
+                            immediately.</p>
+
+                        <h3 style="font-size: 1.2rem; font-weight: 600; margin: 24px 0 12px 0;">Chargebacks</h3>
+                        <p>If you initiate a chargeback with your payment provider without contacting support, we
+                            reserve the right to refuse future sales and to contest fraudulent chargebacks with
+                            supporting evidence.</p>
+                    </section>
+
+                    <!-- Privacy Policy Section -->
+                    <section id="privacy" class="policy-section">
+                        <h2>Privacy Policy</h2>
+                        <p><strong>Last updated:</strong> December 19, 2025</p>
+
+                        <h3 style="font-size: 1.2rem; font-weight: 600; margin: 24px 0 12px 0;">1. Introduction</h3>
+                        <p>NeuroNova Tech ("we", "us") respects your privacy. This policy explains what personal data we
+                            collect, how we use it, and your rights.</p>
+
+                        <h3 style="font-size: 1.2rem; font-weight: 600; margin: 24px 0 12px 0;">2. Information We
+                            Collect</h3>
+                        <ul>
+                            <li><strong>Information you provide:</strong> Name, email, billing address, and payment
+                                details processed by our payment gateway (we do not store full card details)</li>
+                            <li><strong>Automatically collected data:</strong> IP address, device and browser
+                                information, pages visited, and usage metrics collected via analytics tools</li>
+                            <li><strong>Cookies:</strong> We use cookies and similar technologies to operate the site
+                                and provide analytics. You can control cookies via browser settings</li>
+                        </ul>
+
+                        <h3 style="font-size: 1.2rem; font-weight: 600; margin: 24px 0 12px 0;">3. How We Use Your
+                            Information</h3>
+                        <ul>
+                            <li>To process orders and deliver digital products</li>
+                            <li>To communicate with you about your orders and support requests</li>
+                            <li>To analyze and improve our website and products</li>
+                            <li>To comply with legal obligations and fight fraud</li>
+                            <li>To send important updates about purchased products</li>
+                        </ul>
+
+                        <h3 style="font-size: 1.2rem; font-weight: 600; margin: 24px 0 12px 0;">4. Sharing and
+                            Disclosure</h3>
+                        <p>We may share data with third parties that provide services for us (payment processors like
+                            Razorpay, email delivery providers, hosting). We require those providers to protect personal
+                            data and use it only to provide services to us.</p>
+
+                        <h3 style="font-size: 1.2rem; font-weight: 600; margin: 24px 0 12px 0;">5. Data Retention</h3>
+                        <p>We retain personal data as long as necessary to provide services, comply with legal
+                            obligations, and resolve disputes. Order and transaction records are retained for accounting
+                            purposes.</p>
+
+                        <h3 style="font-size: 1.2rem; font-weight: 600; margin: 24px 0 12px 0;">6. Your Rights</h3>
+                        <p>You may request access, correction, or deletion of your personal data. To exercise these
+                            rights, contact <a
+                                href="mailto:neuronovatech.contact@gmail.com">neuronovatech.contact@gmail.com</a>.</p>
+
+                        <h3 style="font-size: 1.2rem; font-weight: 600; margin: 24px 0 12px 0;">7. Security</h3>
+                        <p>We use reasonable administrative and technical measures to protect personal data; however, no
+                            method of transmission over the Internet is completely secure.</p>
+
+                        <h3 style="font-size: 1.2rem; font-weight: 600; margin: 24px 0 12px 0;">8. Children</h3>
+                        <p>Our services are not directed at children under 13. We do not knowingly collect data from
+                            children under 13.</p>
+
+                        <h3 style="font-size: 1.2rem; font-weight: 600; margin: 24px 0 12px 0;">9. Changes to This
+                            Policy</h3>
+                        <p>We may update this policy. When we do, we will post the updated policy with a revised "Last
+                            updated" date.</p>
+
+                        <h3 style="font-size: 1.2rem; font-weight: 600; margin: 24px 0 12px 0;">10. Contact</h3>
+                        <p>If you have questions about this policy, contact <a
+                                href="mailto:neuronovatech.contact@gmail.com">neuronovatech.contact@gmail.com</a>.</p>
+                    </section>
+
+                    <div
+                        style="margin-top: 48px; font-size: 0.75rem; color:#95a5b8; border-top: 1px solid #eef2f6; padding-top: 28px;">
+                        NeuroNova Tech — Transparent legal policies for digital products.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            © 2025 NeuroNova Tech. All rights reserved. | Last updated: May 2026
+        </div>
+    </footer>
+
+    <!-- smooth anchor scrolling with header offset -->
+    <script>
+        (function () {
+            const headerHeight = document.querySelector('.site-header')?.offsetHeight || 80;
+            document.querySelectorAll('.toc-list a, .policy-section a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    const targetId = this.getAttribute('href');
+                    if (!targetId || targetId === '#') return;
+                    const targetElem = document.querySelector(targetId);
+                    if (targetElem) {
+                        e.preventDefault();
+                        const elementPosition = targetElem.getBoundingClientRect().top + window.scrollY;
+                        const offsetPosition = elementPosition - headerHeight - 16;
+                        window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+                    }
+                });
+            });
+        })();
+    </script>
+
+</body>
+
+</html>
